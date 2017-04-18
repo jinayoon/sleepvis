@@ -1,30 +1,100 @@
 /* style for visavail.js */
-.rect_has_data {
-    /* blocks that have data */
-    fill: #5cb85c;
+.awake_data {
+    /* blocks that have awake data */
+    fill: #FFD67A;
 }
 
-.rect_has_data:hover {
-    fill: #449d44
+.restless_data {
+    /* blocks that have restless data */
+    fill: #FFA13B;
 }
 
-.rect_has_no_data {
-    /* blocks without data */
-    fill: #d9534d;
+.light_data {
+    /* blocks that have light sleep data */
+    fill: #569BB2;
 }
 
-.rect_has_no_data:hover {
-    fill: #c9302c;
+.normal_data {
+    /* blocks that have normal sleep data */
+    fill: #2F739E;
 }
 
-.tooltip_has_data {
-    /* color of symbol in tooltip if there is data */
-    color: #449d44;
+.rem_data {
+    /* blocks that have rem sleep data */
+    fill: #274A7B;
 }
 
-.tooltip_has_no_data {
-    /* color of symbol in tooltip if there is no data */
-    color: #c9302c;
+.deep_data {
+    /* blocks that have deep sleep data */
+    fill: #221D63;
+}
+
+.unknown_data {
+    /* blocks that have deep sleep data */
+    fill: #ddd;
+}
+
+.awake_data:hover {
+    fill: #FFBA60;
+}
+
+.restless_data:hover {
+    fill: #EA861E;
+}
+
+.light_data:hover {
+    fill: #398197;
+}
+
+.normal_data:hover {
+    fill: #005B84;
+}
+
+.rem_data:hover {
+    fill: #003462;
+}
+
+.deep_data:hover {
+    fill: #00084B;
+}
+
+.unknown_data:hover {
+    fill: #ccc;
+}
+
+.awake_tooltip {
+    /* color of symbol in tooltips that have awake data */
+    color: #FFD67A;
+}
+
+.restless_tooltip {
+    /* color of symbol in tooltips that have awake data */
+    color: #FFA13B;
+}
+
+.light_tooltip {
+    /* color of symbol in tooltips that have light sleep data */
+    color: #569BB2;
+}
+
+.normal_tooltip {
+    /* color of symbol in tooltips that have normal sleep data */
+    color: #2F739E;
+}
+
+.rem_tooltip {
+    /* color of symbol in tooltips that have rem sleep data */
+    color: #274A7B;
+}
+
+.deep_tooltip {
+    /* color of symbol in tooltips that have deep sleep data */
+    color: #221D63;
+}
+
+.unknown_tooltip {
+    /* color of symbol in tooltips that have deep sleep data */
+    color: #ccc;
 }
 
 div.tooltip {

@@ -10,7 +10,7 @@ function visavailChart() {
     bottom: 20,
 
     // left margin should provide space for y axis titles
-    left: 100,
+    left: 160,
   };
 
   // height of horizontal data bars
@@ -26,7 +26,7 @@ function visavailChart() {
   var paddingBottom = 10;
 
   // space for y axis titles
-  var paddingLeft = -100;
+  var paddingLeft = -140;
 
   var width = 940 - margin.left - margin.right;
 
@@ -448,7 +448,7 @@ function visavailChart() {
             .append('text')
             .attr('x', paddingLeft)
             .attr('y', paddingTopHeading)
-            .text('Data Availability Plot')
+            .text('Sleep Comparison Chart')
             .attr('class', 'heading');
       }
 
@@ -472,38 +472,95 @@ function visavailChart() {
           .attr('class', 'subheading');
 
       // create legend
-      if (!customCategories) {
-        var legend = svg.select('#g_title')
-            .append('g')
-            .attr('id', 'g_legend')
-            .attr('transform', 'translate(0,-12)');
+      var legend = svg.select('#g_title')
+          .append('g')
+          .attr('id', 'g_legend')
+          .attr('transform', 'translate(0,-12)');
 
-        legend.append('rect')
-            .attr('x', width + margin.right - 150)
-            .attr('y', paddingTopHeading)
-            .attr('height', 15)
-            .attr('width', 15)
-            .attr('class', 'rect_has_data');
+      // legend -- awake
+      legend.append('rect')
+          .attr('x', width + margin.right - 570)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'awake_data');
 
-        legend.append('text')
-            .attr('x', width + margin.right - 150 + 20)
-            .attr('y', paddingTopHeading + 8.5)
-            .text('Data available')
-            .attr('class', 'legend');
+      legend.append('text')
+          .attr('x', width + margin.right - 570 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('Awake')
+          .attr('class', 'legend');
 
-        legend.append('rect')
-            .attr('x', width + margin.right - 150)
-            .attr('y', paddingTopHeading + 17)
-            .attr('height', 15)
-            .attr('width', 15)
-            .attr('class', 'rect_has_no_data');
+      // legend -- restless
+      legend.append('rect')
+          .attr('x', width + margin.right - 490)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'restless_data');
 
-        legend.append('text')
-            .attr('x', width + margin.right - 150 + 20)
-            .attr('y', paddingTopHeading + 8.5 + 15 + 2)
-            .text('No data available')
-            .attr('class', 'legend');
-      }
+      legend.append('text')
+          .attr('x', width + margin.right - 490 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('Restless')
+          .attr('class', 'legend');
+
+      // legend -- light
+      legend.append('rect')
+          .attr('x', width + margin.right - 410)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'light_data'); //what is this?
+
+      legend.append('text')
+          .attr('x', width + margin.right - 410 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('Light Sleep')
+          .attr('class', 'legend');
+
+      // legend -- normal
+      legend.append('rect')
+          .attr('x', width + margin.right - 315)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'normal_data'); //what is this?
+
+      legend.append('text')
+          .attr('x', width + margin.right - 315 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('Normal Sleep')
+          .attr('class', 'legend');
+
+      // legend -- rem
+      legend.append('rect')
+          .attr('x', width + margin.right - 210)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'rem_data'); //what is this?
+
+      legend.append('text')
+          .attr('x', width + margin.right - 210 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('REM Sleep')
+          .attr('class', 'legend');
+
+
+      // legend -- deep
+      legend.append('rect')
+          .attr('x', width + margin.right - 120)
+          .attr('y', paddingTopHeading)
+          .attr('height', 15)
+          .attr('width', 15)
+          .attr('class', 'deep_data'); //what is this?
+
+      legend.append('text')
+          .attr('x', width + margin.right - 120 + 20)
+          .attr('y', paddingTopHeading + 8.5)
+          .text('Deep Sleep')
+          .attr('class', 'legend');
     });
   }
 
